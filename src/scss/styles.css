@@ -3,9 +3,9 @@
   width: 1.5em;
   height: 1.5em;
   margin-right: .5rem;
-  line-height: 0;
-  content: "";
-  background-image: url("@src/img/icons/whatsapp.svg");
-  background-repeat: no-repeat;
+  background-image: url("@src/img/icons/whatsapp.svg?inline");
   background-size: 100% 100%;
+  background-repeat: no-repeat;
+  content: "";
+  line-height: 0;
 }
