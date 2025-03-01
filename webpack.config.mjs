@@ -20,7 +20,7 @@ const __dirname = dirname(__filename);
 const projectPath = __dirname;
 const srcPath = join(projectPath, "src");
 const outPath = join(projectPath, "dist");
-const isProduction = () => env.NODE_ENV === "production";
+const isProduction = () => env["NODE_ENV"] === "production";
 
 /**
  * @typedef {import('webpack').Configuration} WebpackCfg
@@ -63,7 +63,7 @@ const webpackConfig = {
         parser: {
           dataUrlCondition(source, { filename }) {
             console.log("dataUrlCondition: ", filename);
-            return Buffer.byteLength(source) <= 3 * 1024; // =maxSize: 3kb
+            return Buffer.byteLength(source) <= 1 * 1024; // =maxSize: 1kb
           },
         },
         generator: {
@@ -104,16 +104,7 @@ const webpackConfig = {
   },
   watchOptions: {
     poll: true,
-    ignored: ["**/node_modules/**"],
-  },
-  stats: {
-    loggingDebug: ["css-loader"],
-    errorDetails: true,
-    children: true,
-    colors: true,
-  },
-  infrastructureLogging: {
-    level: "verbose",
+    ignored: ["node_modules/**"],
   },
 };
 

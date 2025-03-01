@@ -1,11 +1,34 @@
-.i-bg-whatsapp::before {
+[class*="i-bg-"]::before {
   display: block;
-  width: 1.5em;
-  height: 1.5em;
+  width: 128px;
+  height: 128px;
   margin-right: .5rem;
-  background-image: url("@src/img/icons/whatsapp.svg?inline");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   content: "";
   line-height: 0;
+}
+
+.i-bg-whatsapp::before {
+  background-image: url("@src/img/icons/whatsapp.svg?from-css");
+}
+
+.i-bg-whatsapp-force-inline::before {
+  background-image: url("@src/img/icons/whatsapp.svg?from-css&inline");
+}
+
+.i-bg-whatsapp-force-embed::before {
+  background-image: url("@src/img/icons/whatsapp.svg?from-css&dummy&embed");
+}
+
+.i-bg-code-slash::before {
+  background-image: url("@src/img/icons/code-slash.svg?from-css");
+}
+
+.i-bg-code-slash-force-inline::before {
+  background-image: url("@src/img/icons/code-slash.svg?from-css&inline");
+}
+
+.i-bg-code-slash-force-embed::before {
+  background-image: url("@src/img/icons/code-slash.svg?from-css&dummy&embed");
 }
