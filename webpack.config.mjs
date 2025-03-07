@@ -61,20 +61,29 @@ const webpackConfig = {
         ],
       },
       {
-        test: /\.svg/i,
-        type: "asset",
-        parser: {
-          dataUrlCondition(source, { filename }) {
-            console.log("dataUrlCondition: ", filename);
-            return Buffer.byteLength(source) <= 1 * 1024; // =maxSize: 1kb
+        oneOf: [
+          {
+            test: /\.svg/i,
+            resourceQuery: /raw/,
+            type: "asset/source",
           },
-        },
-        generator: {
-          dataUrl: (source, { filename }) => {
-            console.log("dataUrl: ", filename);
-            return svgToMiniDataURI(source.toString());
+          {
+            test: /\.svg/i,
+            type: "asset",
+            parser: {
+              dataUrlCondition(source, { filename }) {
+                console.log("dataUrlCondition: ", filename);
+                return Buffer.byteLength(source) <= 1 * 1024; // =maxSize: 1kb
+              },
+            },
+            generator: {
+              dataUrl: (source, { filename }) => {
+                console.log("dataUrl: ", filename);
+                return svgToMiniDataURI(source.toString());
+              },
+            },
           },
-        },
+        ],
       },
     ],
   },
