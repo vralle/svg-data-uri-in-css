@@ -10,10 +10,10 @@ import codeSlashRaw from "@src/img/icons/code-slash.svg?from-js&raw";
 import whatsappRaw from "@src/img/icons/whatsapp.svg?from-js&raw";
 
 console.log("whatsapp (1.69 KB):\n", whatsapp);
-console.log("whatsappInline (1.69 KB)/n", whatsappInline);
-console.log("whatsappEmbed (1.69 KB)/n", whatsappEmbed);
-console.log("codeSlash (415 bytes)", codeSlash);
-console.log("codeSlashInline (415 bytes)", codeSlashInline);
-console.log("codeSlashEmbed (415 bytes)", codeSlashEmbed);
+console.log("whatsappInline (1.69 KB)\n", whatsappInline);
+console.log("whatsappEmbed (1.69 KB)\n", whatsappEmbed);
+console.log("codeSlash (415 bytes)\n", codeSlash);
+console.log("codeSlashInline (415 bytes)\n", codeSlashInline);
+console.log("codeSlashEmbed (415 bytes)\n", codeSlashEmbed);
 console.log("whatsappRaw (1.69 KB):\n", whatsappRaw);
-console.log("codeSlashRaw (415 bytes)", codeSlashRaw);
+console.log("codeSlashRaw (415 bytes)\n", codeSlashRaw);
