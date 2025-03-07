@@ -46,6 +46,9 @@ const webpackConfig = {
   module: {
     rules: [
       {
+        test: /\.js/i,
+      },
+      {
         test: /\.css/i,
         use: [
           {
@@ -95,7 +98,6 @@ const webpackConfig = {
   },
   devtool: isProduction() ? false : "inline-cheap-source-map",
   devServer: {
-    compress: true,
     static: {
       directory: outPath,
       publicPath: "",
